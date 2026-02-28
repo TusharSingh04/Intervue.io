@@ -1,0 +1,14 @@
+# Render.com Blueprint for Backend Deployment
+services:
+  - type: web
+    name: polling-backend
+    env: node
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: MONGODB_URI
+        sync: false
+      - key: FRONTEND_URL
+        sync: false

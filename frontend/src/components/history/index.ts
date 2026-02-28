@@ -1,0 +1,1 @@
+export { PollHistory } from './PollHistory';
